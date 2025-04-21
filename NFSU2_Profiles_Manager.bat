@@ -56,7 +56,7 @@ function Write-Message($message) {
     Add-Content -LiteralPath $logFile -Value $entry
 }
 
-# Main processing logic encapsulated for both silent and GUI modes.
+# Main processing logic
 function Format-Profile {param([string] $SelectedPseudo, [string] $NewPseudo, [bool] $CloneMode = $false)
          Write-Message "Starting processing: $SelectedPseudo -> $NewPseudo (Clone: $CloneMode)"
     $selectedProfileDir  = Join-Path $NFSlocalAppData $SelectedPseudo
