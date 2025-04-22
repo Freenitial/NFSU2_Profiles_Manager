@@ -126,12 +126,12 @@ MjBDTbbWAAAIAAAAktYAALvAh/LsW+2Td4sBvQ0BAACS1gAAAAAAABYem5U1skRDAQAAAAEAAAAAAAAA
 }
 
 function Update-existingPseudos {
-    $dirs = Get-ChildItem -LiteralPath $NFSlocalAppData -Directory | Where-Object { Test-Path (Join-Path $_.FullName $_.Name) }
+    $dirs = Get-ChildItem -LiteralPath $NFSlocalAppData |
+            Where-Object { $_.PSIsContainer -and (Test-Path (Join-Path $_.FullName $_.Name)) }
     $dirs | ForEach-Object {
         $parent = $_
-        Get-ChildItem -LiteralPath $parent.FullName -File |
-            Where-Object { $_.BaseName -eq $parent.Name -and $_.Extension -eq '' } |
-            Select-Object -ExpandProperty BaseName
+        Get-ChildItem -LiteralPath $parent.FullName -File | 
+            Where-Object { $_.BaseName -eq $parent.Name -and $_.Extension -eq '' } | Select-Object -ExpandProperty BaseName
     }
 }
 
