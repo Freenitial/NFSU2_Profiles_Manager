@@ -1,7 +1,7 @@
 <# ::
 
     :: Author  : Freenitial on GitHub
-    :: Version : 1.0
+    :: Version : 1.1
 
     @cls & @echo off & echo Please wait...
     copy /y "%~f0" "%TEMP%\%~n0.ps1" >NUL && powershell -Nologo -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "%TEMP%\%~n0.ps1" & exit /b
