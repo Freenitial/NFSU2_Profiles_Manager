@@ -17,7 +17,7 @@ A simple tool to manage profiles and pseudo for NFSU2
 ---
 
 ## Requirements : 
-Tested on Windows 10 (Powershell 5.1)
+Windows with PowerShell 2.0
 
 ---
 
