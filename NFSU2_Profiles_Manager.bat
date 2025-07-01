@@ -1,4 +1,4 @@
-﻿<# ::
+<# ::
 
     :: Author  : Freenitial on GitHub
     :: Version : 1.2
@@ -6,8 +6,8 @@
     @cls & @echo off & echo Please wait...
     if exist "%windir%\system32\WindowsPowerShell\v1.0\powershell.exe" (set "powershell=%windir%\system32\WindowsPowerShell\v1.0\powershell.exe") ^
     else                                                               (set "powershell=%windir%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe")
-    copy /y "%~f0" "%TEMP%\%~n0.ps1" >NUL && %powershell% -Nologo -NoProfile -Ex Bypass -Window Hidden -File "%TEMP%\%~n0.ps1"
-    del /f /q "%TEMP%\%~n0.ps1" & exit /b
+    copy /y "%~f0" "%TEMP%\%~n0.ps1" >NUL && start "NFSU Profiles Manager" %powershell% -Nologo -NoProfile -Ex Bypass -Window Hidden -File "%TEMP%\%~n0.ps1"
+    exit /b
     
 #>
 
