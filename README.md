@@ -5,7 +5,7 @@ A simple tool to manage profiles and pseudo for NFSU2
 ---
 
 ## Features :
-- **Create** pseudo (preconfig : XBOX 360 controller, AZERTY keyboard)
+- **Create** pseudo
 - **Modify** pseudo
 - **Clone** profile into a new pseudo
 - **Delete** profile
